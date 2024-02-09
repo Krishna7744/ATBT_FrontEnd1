@@ -11,8 +11,8 @@ const Forms = () => {
                 <Link
                     to="/settingentityform">
                     <div className='grid1-item  text-start'>
-                        <div class=" py-5 px-4 text-center bg-orange-600 rounded-md">
-                            <p class="text-white text-base">
+                        <div className=" py-5 px-4 text-center bg-orange-600 rounded-md">
+                            <p className="text-white text-base">
                                 Entity Form
                             </p>
                         </div>
@@ -22,8 +22,8 @@ const Forms = () => {
 
                 <Link to="/settingboardmeetingform">
                     <div className='grid1-item  text-start'>
-                        <div class=" py-5 px-4 text-center bg-orange-600 rounded-md">
-                            <p class="text-white text-base">
+                        <div className=" py-5 px-4 text-center bg-orange-600 rounded-md">
+                            <p className="text-white text-base">
                                 Broad Meeting Form
                             </p>
                         </div>
@@ -32,8 +32,8 @@ const Forms = () => {
                 <Link
                     to="/settinguserform">
                     <div className='grid1-item  text-start'>
-                        <div class=" py-5 px-4 text-center bg-orange-600 rounded-md">
-                            <p class="text-white text-base">
+                        <div className=" py-5 px-4 text-center bg-orange-600 rounded-md">
+                            <p className="text-white text-base">
                                 UserForm
                             </p>
                         </div>
@@ -43,8 +43,8 @@ const Forms = () => {
 
                 <Link to="/settingteamsform">
                     <div className='grid1-item  text-start'>
-                        <div class=" py-5 px-4 text-center bg-orange-600 rounded-md">
-                            <p class="text-white text-base">
+                        <div className=" py-5 px-4 text-center bg-orange-600 rounded-md">
+                            <p className="text-white text-base">
                                 Teams Form
                             </p>
                         </div>

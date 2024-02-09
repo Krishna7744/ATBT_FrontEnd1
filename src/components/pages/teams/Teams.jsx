@@ -17,52 +17,85 @@ function Teams() {
   };
 
   // -----file upload
-  const [image, SetImage] = useState('')
-  function handleImage(e) {
-    console.log(e.target.files)
-    SetImage(e.target.files[0])
-  }
-  function handleApi() {
-    const formData = new FormData();
-    formData.append('image', image)
-    axios.post('https://localhost:3001/upload', formData)
-      .then((res) => {
-        console.log(res);
-      })
-      .catch((error) => {
-        console.error('Error uploading file:', error.message);
-      });
-  }
+  // const [image, SetImage] = useState('')
+  // function handleImage(e) {
+  //   console.log(e.target.files)
+  //   SetImage(e.target.files[0])
+  // }
+  // function handleApi() {
+  //   const formData = new FormData();
+  //   formData.append('image', image)
+  //   axios.post('https://localhost:3001/upload', formData)
+  //     .then((res) => {
+  //       console.log(res);
+  //     })
+  //     .catch((error) => {
+  //       console.error('Error uploading file:', error.message);
+  //     });
+  // }
 
   const [imageSrc, SetImageSrc] = useState(null)
-  
-  const handleFileChange = (event) => {
-    const file = event.target.files[0];
-    console.log(file)
-    const name = event.target.name;
-    if (file) {
-      const reader = new FileReader();
-      reader.onloadend = () => {
-        axios.post('http://localhost:3001/upload', {image: reader.result})
-        .then((res) => {
-          console.log(res);
-        })
-        .catch((error) => {
-          console.error('Error uploading file:', error.message);
-        });
-        SetImageSrc(reader.result)
 
-      };
-      reader.readAsDataURL(file);
+  // const handleFileChange = (event) => {
+  //   const file = event.target.files[0];
+  //   console.log(file)
+  //   const name = event.target.name;
+  //   if (file) {
+  //     const reader = new FileReader();
+  //     reader.onloadend = () => {
+  //       axios.post('http://localhost:3001/upload', {image: reader.result})
+  //       .then((res) => {
+  //         console.log(res);
+  //       })
+  //       .catch((error) => {
+  //         console.error('Error uploading file:', error.message);
+  //       });
+  //       SetImageSrc(reader.result)
+
+  //     };
+  //     reader.readAsDataURL(file);
+  //   }
+  // };
+  const [file, setFile] = useState(null);
+  const handleImage = (e) => {
+    const selectedFile = e.target.files[0];
+    setFile(selectedFile);
+  };
+  const handleApi = async () => {
+    // Ensure a file is selected
+    if (!file) {
+      alert('Please select a file first.');
+      return;
     }
+
+    // Make a POST request to your backend
+    const formData = new FormData();
+    formData.append('image', file);
+    // console.log(formData, 'fd');
+    const data = await axios.post('https://atbtmain.teksacademy.com/upload', formData);
+    // console.log(data);
+
+    // fetch('http://localhost:3001/upload', {
+    //   method: 'POST',
+    //   body: formData,
+    // })
+    // .then(response => {
+    //   if (response.ok) {
+    //     // Handle successful response
+    //     console.log('Image uploaded successfully.',response.data);
+    //   } else {
+    //     // Handle error response
+    //     console.error('Failed to upload image.');
+    //   }
+    // })
+    // .catch(error => {
+    //   console.error('Error uploading image:', error);
+    // });
   };
 
   return (
     <div className=' p-3 bg-[#f8fafc] overflow-hidden'>
-        <input type='file' name='image' onChange={(event) => handleFileChange(event)}/>
-        <button className="border-2 border-blue-600">submit</button>
-        <img src={imageSrc} alt="" />
-      {/* <div className='grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-3 xl:grid-col-3 gap-2 my-2'>
+      <div className='grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-3 xl:grid-col-3 gap-2 my-2'>
         <h1 className='font-semibold text-lg grid1-item'>Teams</h1>
         <div className='grid1-item  text-start'>
           <label for="default-search" className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
@@ -150,21 +183,21 @@ function Teams() {
           </Menu>
 
         </div>
-      </div> */}
+      </div>
 
-      {/* <div className="flex justify-start gap-6">
+      <div className="flex justify-start gap-6">
         <div
-          className={`cursor-pointer px-5 py-1 font-semibold ${activeTab === 1 ? 'border-b-4 border-orange-600  text-black' : ''
+          className={`cursor-pointer px-5 py-1 font-semibold ${activeTab === 1 ? 'border-b-2 border-orange-600  text-black' : ''
             }`}
           onClick={() => handleTabClick(1)}>Completed
         </div>
         <div
-          className={`cursor-pointer px-5 py-1 font-semibold ${activeTab === 2 ? 'border-b-4 border-orange-600  text-black' : ""
+          className={`cursor-pointer px-5 py-1 font-semibold ${activeTab === 2 ? 'border-b-2 border-orange-600  text-black' : ""
             }`}
           onClick={() => handleTabClick(2)}>Upcoming
         </div>
         <div
-          className={`cursor-pointer px-5 py-1 font-semibold ${activeTab === 3 ? 'border-b-4 border-orange-600  text-black' : ""
+          className={`cursor-pointer px-5 py-1 font-semibold ${activeTab === 3 ? 'border-b-2 border-orange-600  text-black' : ""
             }`}
           onClick={() => handleTabClick(3)}>Overdue
         </div>
@@ -334,7 +367,7 @@ function Teams() {
           </div>
         </div>
       </div>}
-      <div className="flex justify-end  absolute inset-x-0 bottom-2 item-end px-4 pt-3 pb-2 sm:px-6">
+      <div className="flex justify-end pt-1">
         <section className="isolate inline-flex -space-x-px rounded-md shadow-sm" aria-label="Pagination">
           <button
 
@@ -358,7 +391,7 @@ function Teams() {
             </svg>
           </button>
         </section>
-      </div> */}
+      </div>
     </div >
   );
 }

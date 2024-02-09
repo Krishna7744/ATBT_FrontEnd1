@@ -70,7 +70,7 @@ const AuthProvider = ({ children }) => {
   const changePassword = async ({ email }) => {
     try {
       const { status } = await toast.promise(
-        axios.post(`${apiUrl}/api/send-email?email=${email}`),
+        axios.put(`${apiUrl}/user/forgotpassword?email=${email}`),
         {
           pending: 'verifying email',
           success: {
@@ -96,8 +96,8 @@ const AuthProvider = ({ children }) => {
 
   const resetPassword = async ({ id, password }) => {
     try {
-      const { data } = await toast.promise(
-        axios.put(`${apiUrl}/user/changePassword/${id}`, { password }),
+      const { data, status } = await toast.promise(
+        axios.put(`${apiUrl}/user/changepassword/${id}`, {newPassword:password}),
         {
           pending: 'verifying data',
           success: {
@@ -105,9 +105,13 @@ const AuthProvider = ({ children }) => {
               return `Password Updated`
             }
           },
-          error: 'unautorized Access 🤯',
+          error: 'Unauthorized Access 🤯',
         },
       )
+      console.log(status, "status")
+      if(status === 200) {
+        navigate("/login");
+      }
     } catch (e) {
       console.error(e);
     }

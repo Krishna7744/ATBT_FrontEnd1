@@ -54,7 +54,7 @@ const TeamsForm = () => {
                         <div>
                             <label htmlFor="name" className=" block text-sm my-2 font-medium leading-6 text-gray-900" >Description</label>
                             <div className=''>
-                                <textarea name='entitydescription' onChange={handleChange} value={entityform.entitydescription} class="resize-none bg-gray-50 rounded-md text-xs p-2 w-full h-20 border-2 border-gray-200 focus:outline-none focus:border-orange-400"></textarea>
+                                <textarea name='entitydescription' onChange={handleChange} value={entityform.entitydescription} className="resize-none bg-gray-50 rounded-md text-xs p-2 w-full h-20 border-2 border-gray-200 focus:outline-none focus:border-orange-400"></textarea>
                             </div>
                         </div>
 
@@ -67,8 +67,8 @@ const TeamsForm = () => {
                                     return (
                                         <span className='flex gap-1 text-xs my-1 border-2 border-gray-200 rounded-md p-0.5 focus:border-orange-600
                     '>
-                                            <img class="w-4 h-4 rounded-lg" src={defprop} alt="Neil image" /> {mail} <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
-                                                class="w-4 h-4 " onClick={() => handleRemove(result)}>
+                                            <img className="w-4 h-4 rounded-lg" src={defprop} alt="Neil image" /> {mail} <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
+                                                className="w-4 h-4 " onClick={() => handleRemove(result)}>
                                                 <path d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94 5.28 4.22Z" />
                                             </svg>
                                         </span>
@@ -115,9 +115,9 @@ const TeamsForm = () => {
                     <div className='mb-5 mt-3'>
                         <div className="flex gap-4">
                             <div className="group h-10 ">
-                                <img class="w-10 h-10 rounded-lg " src={teams_img} alt="Neil image" />
+                                <img className="w-10 h-10 rounded-lg " src={teams_img} alt="Neil image" />
                             </div>
-                            <p class="text-lg font-black text-gray-800 mt-2">{entityform.entityname}</p>
+                            <p className="text-lg font-black text-gray-800 mt-2">{entityform.entityname}</p>
                         </div>
                         <hr className='my-3' />
                         <div className='h-20 overflow-auto border border-1 border-gray-200 rounded-md p-2 bg-[#f8fafc] text-sm w-full  '>

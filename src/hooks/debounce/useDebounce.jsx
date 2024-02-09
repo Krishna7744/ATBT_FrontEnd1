@@ -11,7 +11,6 @@ function useDebounce(dispatch) {
   }, 300);
 
   const debouncedSetSearch = debounce((searchData) => {
-    console.log(searchData)
     dispatch({
       type: "SET_SEARCH",
       payload: searchData

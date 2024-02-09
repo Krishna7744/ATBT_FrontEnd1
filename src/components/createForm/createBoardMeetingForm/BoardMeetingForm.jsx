@@ -66,7 +66,7 @@ function BoardMeetingForm() {
             <div>
               <label htmlFor="name" className=" block text-sm my-2 font-medium  text-gray-900" >Description</label>
               <div className=''>
-                <textarea name='boardMeetingDescription' value={boardMeetingForm.boardMeetingDescription} onChange={handleBoardMeetingData} class="resize-none bg-gray-50 rounded-md text-xs p-2 w-full h-20 border-2 border-gray-200 focus:outline-none focus:border-orange-400"></textarea>
+                <textarea name='boardMeetingDescription' value={boardMeetingForm.boardMeetingDescription} onChange={handleBoardMeetingData} className="resize-none bg-gray-50 rounded-md text-xs p-2 w-full h-20 border-2 border-gray-200 focus:outline-none focus:border-orange-400"></textarea>
               </div>
             </div>
             <div className='relative'>
@@ -112,10 +112,10 @@ function BoardMeetingForm() {
           <div className='mb-5 mt-3'>
             <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-3 xl:grid-cols-3 lg:grid-cols-3 gap-4">
               {/* <div className="group h-10 ">
-                <img class="w-10 h-10 rounded-lg " src={defprop} alt="Neil image" />
+                <img className="w-10 h-10 rounded-lg " src={defprop} alt="Neil image" />
               </div> */}
               <div className='col-span-2 '>
-                <p class="text-lg font-black text-gray-800 ">{boardMeetingForm.boardMeetingName}</p>
+                <p className="text-lg font-black text-gray-800 ">{boardMeetingForm.boardMeetingName}</p>
                 <p className='text-xs  text-gray-500'><span className='text-xs font-semi-bold text-gray-700'> Address:</span> Pista House Opposite, secunderabad , HYD</p>
               </div>
               <div className='col-span-1 text-end'>

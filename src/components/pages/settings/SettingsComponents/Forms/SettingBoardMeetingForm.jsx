@@ -2,7 +2,7 @@ import React from 'react'
 
 const SettingBoardMeetingForm = () => {
   return (
-    <div>SettingBoardMeetingForm</div>
+    <div>Setting Board Meeting Form</div>
   )
 }
 

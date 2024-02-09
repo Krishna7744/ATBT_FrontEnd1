@@ -9,22 +9,21 @@ import * as api from './utils/usersApis'
 import userDataReducer from "./userDataReducer";
 import { initialState } from "./utils/usersConfig";
 import { AuthContext } from "../authContext/authContext";
+import { useNavigate } from "react-router-dom";
 
 export const UserDataContext = createContext();
 
 const localStorageData = JSON.parse(localStorage.getItem("data"));
 
 const UserDataProvider = ({ children }) => {
+  const navigate = useNavigate();
   const [usersState, usersDispatch] = useReducer(
     userDataReducer,
     initialState
   );
 
+
   const { authState } = useContext(AuthContext);
-
-  console.log(authState, "context auth")
-
-  console.log(usersState.pagination.loading, "loading")
 
   const getAllUsers = async () => {
     const { status, data } = await api.getAllUsers();
@@ -33,18 +32,33 @@ const UserDataProvider = ({ children }) => {
     }
   }
 
-  const getPaginatedUsersData = async () => {
-    const {currentPage,pageSize,sortBy,search} = usersState.pagination;
-    usersDispatch(actions.setLoading())
+  const getDashboardUsersData = async () => {
+    const {currentPage,pageSize,sortBy,search} = usersState.dashboard;
+    usersDispatch(actions.setLoading("DASHBOARD"))
     try {
-      const { status, data } = await api.getPaginatedUsers(currentPage,pageSize,sortBy,search)
+      const { status, data } = await api.getDashboardUsers(currentPage,pageSize,sortBy,search)
       if (status === 200) {
-        usersDispatch(actions.setPaginatedUsers(data))
+        usersDispatch(actions.setDashboardUsers(data,'DASHBOARD'))
       }
     } catch (error) {
       console.error(error);
     } finally {
-      usersDispatch(actions.setLoading())
+      usersDispatch(actions.setLoading("DASHBOARD"))
+    }
+  };
+
+  const getSettingsUsersData = async () => {
+    const {currentPage,pageSize,sortBy,search} = usersState.settings;
+    usersDispatch(actions.setLoading("SETTINGS"))
+    try {
+      const { status, data } = await api.getSettingsUsers(currentPage,pageSize,sortBy,search)
+      if (status === 200) {
+        usersDispatch(actions.setDashboardUsers(data,'SETTINGS'))
+      }
+    } catch (error) {
+      console.error(error);
+    } finally {
+      usersDispatch(actions.setLoading("SETTINGS"))
     }
   };
 
@@ -61,10 +75,17 @@ const UserDataProvider = ({ children }) => {
 
   const createUser = async (userData) => {
     try {
+      console.log("navig")
       const { data, status } = await api.createUser(userData, authState.token)
-      if (status === 201) {
-        getPaginatedUsersData()
+      console.log(data, status, "navig")
+      getDashboardUsersData()
+      getSettingsUsersData()
+      getAllUsers()
+      if (status === 200) {
+        getDashboardUsersData()
+        getSettingsUsersData()
         getAllUsers()
+        navigate(`/`)
       }
     }
     catch (e) {
@@ -77,7 +98,8 @@ const UserDataProvider = ({ children }) => {
       console.log(localStorageData?.token)
       const { data, status } = await api.deleteUser(id, authState.token)
       if (status === 200) {
-        getPaginatedUsersData()
+        getDashboardUsersData()
+        getSettingsUsersData()
         getAllUsers()
       }
     }
@@ -87,12 +109,13 @@ const UserDataProvider = ({ children }) => {
   }
 
   useEffect(() => {
-    // getUsersData();
-    getPaginatedUsersData();
+    getDashboardUsersData();
+    getSettingsUsersData();
     // eslint-disable-next-line
-  }, [usersDispatch,usersState?.pagination?.currentPage,usersState?.pagination?.search]);
+  }, [usersDispatch,usersState?.dashboard?.currentPage,usersState?.dashboard?.search,usersState?.dashboard?.pageSize,usersState?.settings?.sortBy,usersState?.settings?.currentPage,usersState?.settings?.search,usersState?.settings?.pageSize,usersState?.settings?.sortBy]);
   useEffect(() => {
     getAllUsers()
+    getSettingsUsersData();
     // eslint-disable-next-line
   }, []);
 
@@ -103,8 +126,11 @@ const UserDataProvider = ({ children }) => {
         usersDispatch,
         createUser,
         getUser,
-        getPaginatedUsersData,
-        deleteUser
+        getDashboardUsersData,
+        getSettingsUsersData,
+        deleteUser,
+        setSortBy: actions.setSortBy,
+        toggleUser: api.toggleUser
       }}
     >
       {children}

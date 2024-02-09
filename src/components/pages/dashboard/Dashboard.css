@@ -54,8 +54,8 @@
     .completed_tasks,
     .upcoming_tasks,
     .overdue_tasks {
-        margin-left: 0.5rem;
-        margin-right: 0.5rem;
+        /* margin-left: 0.5rem; */
+        /* margin-right: 0.5rem; */
     }
 
 }

@@ -2,7 +2,7 @@ import React from 'react'
 
 const SettingTeamsForm = () => {
   return (
-    <div>SettingTeamsForm</div>
+    <div>Setting Teams Form</div>
   )
 }
 

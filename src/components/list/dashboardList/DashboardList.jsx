@@ -3,10 +3,11 @@ import defprop from '../../../Images/defprof.svg'
 import { caseLetter } from '../../../utils/utils'
 
 function DashboardList({user}) {
+  // console.log(user, "for image")
   return (
     <div className="flex items-center">
     <div className="flex-shrink-0">
-      <img className="w-8 h-8 rounded-full" src={user?.image ?? `https://picsum.photos/seed/${user.id+Math.random}/100`} alt="Neil image" />
+      <img className="w-8 h-8 rounded-full" src={`https://picsum.photos/seed/${user.id+Math.random}/100`} alt="user" />
 
     </div>
     <div className="flex-1 min-w-0 ms-4">

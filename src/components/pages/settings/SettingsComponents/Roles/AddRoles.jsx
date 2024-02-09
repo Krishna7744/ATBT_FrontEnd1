@@ -132,8 +132,8 @@ const AddRoles = () => {
                     <label className="relative inline-flex items-center cursor-pointer">
                       <input type="checkbox" name="all" value={item.all} className="sr-only peer" checked={item.all}
                         onChange={() => handletoggle("all", index)} />
-                      <div className={`w-8 h-4  ${item.all ? "bg-orange-600" : "bg-slate-300"} peer-focus:outline-none rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[1px] after:start-[1px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-3.5 after:w-3.5 after:transition-all dark:border-orange-600 checked:bg-orange-600`}>
-                        
+                      <div className={`w-7 h-4  ${item.all ? "bg-orange-600" : "bg-slate-300"} peer-focus:outline-none rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[1px] after:start-[1px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-3.5 after:w-3.5 after:transition-all dark:border-orange-600 checked:bg-orange-600`}>
+
                       </div>
 
                     </label>

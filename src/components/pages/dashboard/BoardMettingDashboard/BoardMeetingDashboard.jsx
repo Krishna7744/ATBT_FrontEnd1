@@ -8,7 +8,7 @@ const BoardMeetingDashboard = () => {
                 <div className='p-4 sm:px-6 sm:pt-2'>
                     {/* hero module */}
                     <div className="flex items-center justify-between mb-2">
-                        <h5 className="text-lg font-semibold leading-none text-gray-800 dark:text-white"> Board Meeting
+                        <h5 className="text-lg font-semibold leading-none text-gray-800 dark:text-white"> Board Meetings
                             {/* {pagination.loading ? '...' : null} */}
                         </h5>
                         <Link to="/users/new" className="text-sm font-medium text-white-600 hover:underline dark:text-white-500">
@@ -24,13 +24,89 @@ const BoardMeetingDashboard = () => {
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5">
                             <path fill-rule="evenodd" d="M9 3.5a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11ZM2 9a7 7 0 1 1 12.452 4.391l3.328 3.329a.75.75 0 1 1-1.06 1.06l-3.329-3.328A7 7 0 0 1 2 9Z" clip-rule="evenodd" />
                         </svg>
-                        {/* <input onChange={(e) => debouncedSetSearch(e)} type="search" id="gsearch" name="gsearch" className='bg-slate-50 border-none focus:outline-none appearance-none focus:border-none' placeholder='Search here....' /> */}
-                    </div><hr className='w-60 my-1' />
+                        <input type="search" id="gsearch" name="gsearch" className='bg-slate-50 w-80 border-none focus:outline-none appearance-none focus:border-none' placeholder='Search here....' />
+                    </div><hr className='w-96 my-1' />
                 </div>
                 <hr />
                 {/* list module */}
                 <div className="flow-root p-3 sm:px-6 sm:py-2">
                     <ul role="list" className="divide-y divide-gray-200 dark:divide-gray-700">
+                        {/* 1 to 5  static data */}
+                        <li className='py-2'>
+                            <div class="flex items-center">
+                                <div class="flex-shrink-0">
+                                    <img class="w-8 h-8 rounded-full" src="https://images.unsplash.com/photo-1682685795579-37e731bfefab" alt="Neil image" />
+                                </div>
+                                <div class="flex-1 min-w-0 ms-4">
+                                    <p class="text-sm font-medium text-gray-900 text-start truncate dark:text-white">Madhav</p>
+                                </div>
+                                <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+                                        <path d="M6.3 2.84A1.5 1.5 0 0 0 4 4.11v11.78a1.5 1.5 0 0 0 2.3 1.27l9.344-5.891a1.5 1.5 0 0 0 0-2.538L6.3 2.841Z"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </li>
+                        <li className='py-2'>
+                            <div class="flex items-center">
+                                <div class="flex-shrink-0">
+                                    <img class="w-8 h-8 rounded-full" src="https://images.unsplash.com/photo-1707003839745-0df405c490c5" alt="Neil image" />
+                                </div>
+                                <div class="flex-1 min-w-0 ms-4">
+                                    <p class="text-sm font-medium text-gray-900 text-start truncate dark:text-white">Venkat</p>
+                                </div>
+                                <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+                                        <path d="M6.3 2.84A1.5 1.5 0 0 0 4 4.11v11.78a1.5 1.5 0 0 0 2.3 1.27l9.344-5.891a1.5 1.5 0 0 0 0-2.538L6.3 2.841Z"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </li>
+                        <li className='py-2'>
+                            <div class="flex items-center">
+                                <div class="flex-shrink-0">
+                                    <img class="w-8 h-8 rounded-full" src="https://images.unsplash.com/photo-1682688759157-57988e10ffa8" alt="Neil image" />
+                                </div>
+                                <div class="flex-1 min-w-0 ms-4">
+                                    <p class="text-sm font-medium text-gray-900 text-start truncate dark:text-white">Kumar</p>
+                                </div>
+                                <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+                                        <path d="M6.3 2.84A1.5 1.5 0 0 0 4 4.11v11.78a1.5 1.5 0 0 0 2.3 1.27l9.344-5.891a1.5 1.5 0 0 0 0-2.538L6.3 2.841Z"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </li>
+                        <li className='py-2'>
+                            <div class="flex items-center">
+                                <div class="flex-shrink-0">
+                                    <img class="w-8 h-8 rounded-full" src="https://images.unsplash.com/photo-1707139057009-dd16280fa07f" alt="Neil image" />
+                                </div>
+                                <div class="flex-1 min-w-0 ms-4">
+                                    <p class="text-sm font-medium text-gray-900 text-start truncate dark:text-white">Sunil</p>
+                                </div>
+                                <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+                                        <path d="M6.3 2.84A1.5 1.5 0 0 0 4 4.11v11.78a1.5 1.5 0 0 0 2.3 1.27l9.344-5.891a1.5 1.5 0 0 0 0-2.538L6.3 2.841Z"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </li>
+                        <li className='py-2'>
+                            <div class="flex items-center">
+                                <div class="flex-shrink-0">
+                                    <img class="w-8 h-8 rounded-full" src="https://images.unsplash.com/photo-1707187444693-0a7c57769024" alt="Neil image" />
+                                </div>
+                                <div class="flex-1 min-w-0 ms-4">
+                                    <p class="text-sm font-medium text-gray-900 text-start truncate dark:text-white">Venu</p>
+                                </div>
+                                <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+                                        <path d="M6.3 2.84A1.5 1.5 0 0 0 4 4.11v11.78a1.5 1.5 0 0 0 2.3 1.27l9.344-5.891a1.5 1.5 0 0 0 0-2.538L6.3 2.841Z"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </li>
                         {/* {pagination?.paginatedUsers === "no data to show for this page" ? (
                             <li className="py-2 sm:py-2">
                                 <p>No user found</p>
@@ -62,6 +138,7 @@ const BoardMeetingDashboard = () => {
                         Next
                     </a>
                 </div>
+                <div className='hidden sm:block text-gray-700 text-sm'>Showing 1 to 5 of 5 Result</div>
                 {/*only for big screen pagination */}
                 <div className="hidden sm:flex sm:flex-1 sm:items-center sm:justify-between">
                     {/* pagination data */}

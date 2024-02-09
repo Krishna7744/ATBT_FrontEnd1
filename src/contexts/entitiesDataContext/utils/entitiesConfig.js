@@ -8,7 +8,7 @@ export const initialState = {
         perPage: 5,
         loading: false,
         search: "",
-        sortBy: "Entite_Name",
+        sortBy: "createdAt",
         startEntity: null,
         endEntity: null,
     },
@@ -20,7 +20,7 @@ export const initialState = {
         perPage: 10,
         loading: false,
         search: "",
-        sortBy: "Entite_Name",
+        sortBy: "createdAt",
         startEntity: null,
         endEntity: null,
     }

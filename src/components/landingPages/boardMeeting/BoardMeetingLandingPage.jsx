@@ -125,7 +125,7 @@ const BoardMeetingLandingPage = () => {
                     className="rounded-full w-12 h-12 mr-2"
                   />
                 </div>
-                <p class="text-lg font-black text-gray-800 mt-2">Bhavitha</p>
+                <p className="text-lg font-black text-gray-800 mt-2">Bhavitha</p>
               </div>
               <div>
                 <button type="button" className="rounded-md bg-orange-600 px-3 py-2 text-sm font-medium leading-6 text-white shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-600 inline-flex ">
@@ -368,24 +368,24 @@ const BoardMeetingLandingPage = () => {
             <div className={`fixed inset-0 transition-all duration-500 bg-gray-800 bg-opacity-50 z-50 ${isOpen ? '' : 'hidden'}`}>
               <div className={`${expand ? "w-5/6" : "w-1/2"} p-3 fixed inset-y-0 right-0 w-1/2 bg-white shadow-lg transform translate-x-0 transition-transform duration-300 ease-in-out`}>
                 <div className="flex justify-start">
-                  <div class="relative inline-block ms-2">
-                    <select class="block appearance-none w-full bg-white text-sm border border-gray-300 hover:border-gray-300 px-1 py-1.5 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
+                  <div className="relative inline-block ms-2">
+                    <select className="block appearance-none w-full bg-white text-sm border border-gray-300 hover:border-gray-300 px-1 py-1.5 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
                       <option value="option1">Select Status</option>
                       <option value="option2">Complete</option>
                       <option value="option3">Inprogress</option>
                       <option value="option4">To Do</option>
                     </select>
-                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-                      <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                    <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                      <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                         <path d="M7 7l3-3 3 3m0 6l-3 3-3-3"></path>
                       </svg>
                     </div>
                   </div>
                   <div className='absolute top-4 right-4 flex flex-row'>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 me-4 text-gray-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-5 h-5 me-4 text-gray-500">
                       <path stroke-linecap="round" stroke-linejoin="round" d="M6.633 10.25c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 0 1 2.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 0 0 .322-1.672V2.75a.75.75 0 0 1 .75-.75 2.25 2.25 0 0 1 2.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282m0 0h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 0 1-2.649 7.521c-.388.482-.987.729-1.605.729H13.48c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 0 0-1.423-.23H5.904m10.598-9.75H14.25M5.904 18.5c.083.205.173.405.27.602.197.4-.078.898-.523.898h-.908c-.889 0-1.713-.518-1.972-1.368a12 12 0 0 1-.521-3.507c0-1.553.295-3.036.831-4.398C3.387 9.953 4.167 9.5 5 9.5h1.053c.472 0 .745.556.5.96a8.958 8.958 0 0 0-1.302 4.665c0 1.194.232 2.333.654 3.375Z" />
                     </svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="me-4 w-5 h-5 text-gray-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="me-4 w-5 h-5 text-gray-500">
                       <path fill-rule="evenodd" d="M18.97 3.659a2.25 2.25 0 0 0-3.182 0l-10.94 10.94a3.75 3.75 0 1 0 5.304 5.303l7.693-7.693a.75.75 0 0 1 1.06 1.06l-7.693 7.693a5.25 5.25 0 1 1-7.424-7.424l10.939-10.94a3.75 3.75 0 1 1 5.303 5.304L9.097 18.835l-.008.008-.007.007-.002.002-.003.002A2.25 2.25 0 0 1 5.91 15.66l7.81-7.81a.75.75 0 0 1 1.061 1.06l-7.81 7.81a.75.75 0 0 0 1.054 1.068L18.97 6.84a2.25 2.25 0 0 0 0-3.182Z" clip-rule="evenodd" />
                     </svg>
                     <svg xmlns="http://www.w3.org/2000/svg" onClick={() => setExpand((e) => !e)} viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 me-4 text-gray-500">
@@ -422,15 +422,15 @@ const BoardMeetingLandingPage = () => {
                   <div className='mt-5 flex flex-row'>
                     <p className='basis-1/4 text-sm text-gray-600  mt-1'>Priority</p>
                     <p className='basis-1/2'>
-                      <div class="relative inline-block">
-                        <select class="block appearance-none w-full bg-white border text-sm border-gray-300 hover:border-gray-300 px-1 py-1.5 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
+                      <div className="relative inline-block">
+                        <select className="block appearance-none w-full bg-white border text-sm border-gray-300 hover:border-gray-300 px-1 py-1.5 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
                           <option value="option1">Select Priority</option>
                           <option value="option2">Low</option>
                           <option value="option3">Medium</option>
                           <option value="option4">High</option>
                         </select>
-                        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-                          <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                        <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                          <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                             <path d="M7 7l3-3 3 3m0 6l-3 3-3-3"></path>
                           </svg>
                         </div>
@@ -509,20 +509,20 @@ const BoardMeetingLandingPage = () => {
                   <div className='mt-5'>
                     <textarea placeholder="What is this task about ?" className="p-3 text-sm resize-none shadow-sm rounded-md w-full h-32 focus:outline-none focus:border-orange-400"></textarea>
                   </div>
-                  <div class="flex mt-5">
-                    <div class="me-2">
+                  <div className="flex mt-5">
+                    <div className="me-2">
                       <p className='bg-yellow-500 text-black py-1.5 w-8 h-8  rounded-full'><span className='flex justify-center text-gray-800 text-sm'>BA</span></p>
                     </div>
-                    <div class="flex-1 w-86">
+                    <div className="flex-1 w-86">
                       <textarea placeholder="Add a comment" className="p-2 border-2 text-sm resize-none shadow-sm rounded-md w-full h-24 focus:outline-none focus:border-orange-400"></textarea>
-                      <div class="me-2 flex flex-row">
+                      <div className="me-2 flex flex-row">
                         <p className='text-sm mt-1'>Collaborators</p>
                         <p className='ms-2 bg-yellow-500 text-black py-1.5 w-8 h-8 rounded-full'><span className='flex justify-center text-gray-800 text-sm'>BA</span></p>
-                        <p className='ms-2 bg-white border-dashed border-2 border-gray-600 text-gray-600  py-1 w-7 h-7 rounded-full'><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="ms-1 w-4 h-4">
+                        <p className='ms-2 bg-white border-dashed border-2 border-gray-600 text-gray-600  py-1 w-7 h-7 rounded-full'><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="ms-1 w-4 h-4">
                           <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
                         </svg>
                         </p>
-                        <p className='ms-2 bg-white border-dashed border-2 border-gray-600 text-gray-600  py-1 w-7 h-7 rounded-full'><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="ms-1 w-4 h-4">
+                        <p className='ms-2 bg-white border-dashed border-2 border-gray-600 text-gray-600  py-1 w-7 h-7 rounded-full'><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="ms-1 w-4 h-4">
                           <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
                         </svg>
                         </p>

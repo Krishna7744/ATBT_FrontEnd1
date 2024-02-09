@@ -36,14 +36,14 @@ const editEmailTemplate = () => {
           <div className="">
             <label htmlFor="variables" className="text-sm font-medium text-gray-900 mr-2">Insert&nbsp;Variables :</label>
             <div className='relative '>
-              <select class="mt-2 p-3 block w-full rounded-md border border-1 border-gray-400 py-1.5 text-gray-900 bg-gray-100  appearance-none shadow-sm  placeholder:text-gray-400 focus:outline-none focus:border-orange-400 sm:text-sm sm:leading-6">
+              <select className="mt-2 p-3 block w-full rounded-md border border-1 border-gray-400 py-1.5 text-gray-900 bg-gray-100  appearance-none shadow-sm  placeholder:text-gray-400 focus:outline-none focus:border-orange-400 sm:text-sm sm:leading-6">
                 <option value="option1">Select Insert Variables</option>
                 <option value="option2">Complete</option>
                 <option value="option3">Inprogress</option>
                 <option value="option4">To Do</option>
               </select>
-              <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-                <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+              <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                   <path d="M7 7l3-3 3 3m0 6l-3 3-3-3"></path>
                 </svg>
               </div>
@@ -53,10 +53,38 @@ const editEmailTemplate = () => {
         <div className='col-span-3'>
           <label htmlFor="name" className=" block text-sm my-2 font-medium leading-6 text-gray-900" >Description</label>
           <div className=''>
-            <textarea name='Description' value="In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available. Wikipedia" class=" bg-gray-50 rounded-md text-sm p-2 w-full h-56 border-2 border-gray-200 focus:outline-none focus:border-orange-400"></textarea>
+            <textarea name='Description' value="In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available. Wikipedia" className=" bg-gray-50 rounded-md text-sm p-2 w-full h-56 border-2 border-gray-200 focus:outline-none focus:border-orange-400"></textarea>
           </div>
         </div>
-
+        <div className='border-2 p-4 border-gray-200 rounded-md'>
+          <p className='text-lg font-semibold'>Internals</p>
+          <div className='grid grid-cols-3 gap-4 mt-3'>
+            <div>
+              <ul>
+                <li className='text-gray-400 text-sm'>Created By</li>
+                <li>Teks Academy</li>
+              </ul>
+            </div>
+            <div>
+              <ul>
+                <li className='text-gray-400 text-sm'>Created At</li>
+                <li>Feb 1, 2024 at 6:10 PM</li>
+              </ul>
+            </div>
+            <div>
+              <ul>
+                <li className='text-gray-400 text-sm'>Updated By</li>
+                <li>Teks Academy</li>
+              </ul>
+            </div>
+            <div>
+              <ul>
+                <li className='text-gray-400 text-sm'>Updated At</li>
+                <li>Feb 1, 2024 at 6:10 PM</li>
+              </ul>
+            </div>
+          </div>
+        </div>
         <div className='grid grid-cols-4 gap-4'>
           <div className='col-span-4 text-end'>
             <button type="submit"

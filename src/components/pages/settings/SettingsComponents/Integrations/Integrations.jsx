@@ -10,8 +10,8 @@ const Integrations = () => {
                 <Link
                     to="/whatsappintegration">
                     <div className='grid1-item  text-start'>
-                        <div class=" py-5 px-4 text-center bg-orange-600 rounded-md">
-                            <p class="text-white text-base">
+                        <div className=" py-5 px-4 text-center bg-orange-600 rounded-md">
+                            <p className="text-white text-base">
                                 Whatsapp
                             </p>
                         </div>
@@ -21,8 +21,8 @@ const Integrations = () => {
 
                 <Link to="/emailintegration">
                     <div className='grid1-item  text-start'>
-                        <div class=" py-5 px-4 text-center bg-orange-600 rounded-md">
-                            <p class="text-white text-base">
+                        <div className=" py-5 px-4 text-center bg-orange-600 rounded-md">
+                            <p className="text-white text-base">
                                 Email
                             </p>
                         </div>
@@ -30,8 +30,8 @@ const Integrations = () => {
                 </Link>
                 <Link to="/api">
                     <div className='grid1-item  text-start'>
-                        <div class=" py-5 px-4 text-center bg-orange-600 rounded-md">
-                            <p class="text-white text-base">
+                        <div className=" py-5 px-4 text-center bg-orange-600 rounded-md">
+                            <p className="text-white text-base">
                                 API
                             </p>
                         </div>
@@ -39,8 +39,8 @@ const Integrations = () => {
                 </Link>
                 <Link to="/webhook">
                     <div className='grid1-item  text-start'>
-                        <div class=" py-5 px-4 text-center bg-orange-600 rounded-md">
-                            <p class="text-white text-base">
+                        <div className=" py-5 px-4 text-center bg-orange-600 rounded-md">
+                            <p className="text-white text-base">
                                 Web Hook
                             </p>
                         </div>
@@ -48,8 +48,8 @@ const Integrations = () => {
                 </Link>
                 <Link to="/sms">
                     <div className='grid1-item  text-start'>
-                        <div class=" py-5 px-4 text-center bg-orange-600 rounded-md">
-                            <p class="text-white text-base">
+                        <div className=" py-5 px-4 text-center bg-orange-600 rounded-md">
+                            <p className="text-white text-base">
                                 Sms
                             </p>
                         </div>
@@ -57,8 +57,8 @@ const Integrations = () => {
                 </Link>
                 <Link to="/paymentgateway">
                     <div className='grid1-item  text-start'>
-                        <div class=" py-5 px-4 text-center bg-orange-600 rounded-md">
-                            <p class="text-white text-base">
+                        <div className=" py-5 px-4 text-center bg-orange-600 rounded-md">
+                            <p className="text-white text-base">
                                 Payment GateWay
                             </p>
                         </div>

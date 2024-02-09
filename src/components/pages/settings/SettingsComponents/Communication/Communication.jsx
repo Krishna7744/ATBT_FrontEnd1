@@ -9,8 +9,8 @@ const Communication = () => {
                 <Link
                     to="/whatsapp">
                     <div className='grid1-item  text-start'>
-                        <div class=" py-5 px-4 text-center bg-orange-600 rounded-md">
-                            <p class="text-white text-base">
+                        <div className=" py-5 px-4 text-center bg-orange-600 rounded-md">
+                            <p className="text-white text-base">
                                 Whatsapp
                             </p>
                         </div>
@@ -20,8 +20,8 @@ const Communication = () => {
                 <Link
                     to="/email">
                     <div className='grid1-item  text-start'>
-                        <div class=" py-5 px-4 text-center bg-orange-600 rounded-md">
-                            <p class="text-white text-base">
+                        <div className=" py-5 px-4 text-center bg-orange-600 rounded-md">
+                            <p className="text-white text-base">
                                 Email
                             </p>
                         </div>

@@ -22,13 +22,13 @@ export const deleteEntity = async (id) => {
     return toast.promise(
         axios.delete(url),
         {
-            pending: 'Deleting Entite',
+            pending: 'Deleting entity',
             success: {
                 render({ data }) {
-                    return 'Entite Deleted';
+                    return 'entity Deleted';
                 },
             },
-            error: 'Unable to delete entite 🤯',
+            error: 'Unable to delete entity 🤯',
         },
     );
 };

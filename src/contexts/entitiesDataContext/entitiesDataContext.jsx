@@ -19,8 +19,6 @@ const [entitiesState, entitiesDispatch] = useReducer(
     initialState
 );
 
-console.log(entitiesState)
-
 const getAllEntities = async() => {
   const {data} = await api.getAllEntities();
   entitiesDispatch(actions.setEntities(data))
@@ -65,7 +63,6 @@ const deleteEntitybyId = async(id)=> {
 }
 
 const getEntitybyId = async(id)=> {
-  console.log(id,"vid")
       try {
           const data = await api.getEntityById(id);
           getpaginatedEntitiesData();

@@ -15,14 +15,14 @@ const FieldsWhatsappTemplate = () => {
                     <div className="">
                         <label htmlFor="variables" className="text-sm font-medium text-gray-900 mr-2">Project Fields</label>
                         <div className="relative">
-                            <select class="mt-2 p-3 block w-full rounded-md border border-1 border-gray-400 py-1.5 text-gray-900 bg-gray-100  appearance-none shadow-sm  placeholder:text-gray-400 focus:outline-none focus:border-orange-400 sm:text-sm sm:leading-6">
+                            <select className="mt-2 p-3 block w-full rounded-md border border-1 border-gray-400 py-1.5 text-gray-900 bg-gray-100  appearance-none shadow-sm  placeholder:text-gray-400 focus:outline-none focus:border-orange-400 sm:text-sm sm:leading-6">
                                 <option value="option1">Last Name</option>
                                 <option value="option2">1</option>
                                 <option value="option3">2</option>
                                 <option value="option4">3</option>
                             </select>
-                            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-                                <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                            <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                                <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                                     <path d="M7 7l3-3 3 3m0 6l-3 3-3-3"></path>
                                 </svg>
                             </div>
@@ -51,14 +51,14 @@ const FieldsWhatsappTemplate = () => {
                     </div>
                     <div className="">
                         <div className="relative">
-                            <select class="mt-2 p-3 block w-full rounded-md border border-1 border-gray-400 py-1.5 text-gray-900 bg-gray-100  appearance-none shadow-sm  placeholder:text-gray-400 focus:outline-none focus:border-orange-400 sm:text-sm sm:leading-6">
+                            <select className="mt-2 p-3 block w-full rounded-md border border-1 border-gray-400 py-1.5 text-gray-900 bg-gray-100  appearance-none shadow-sm  placeholder:text-gray-400 focus:outline-none focus:border-orange-400 sm:text-sm sm:leading-6">
                                 <option value="option1">Owner</option>
                                 <option value="option2">1</option>
                                 <option value="option3">2</option>
                                 <option value="option4">3</option>
                             </select>
-                            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-                                <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                            <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                                <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                                     <path d="M7 7l3-3 3 3m0 6l-3 3-3-3"></path>
                                 </svg>
                             </div>

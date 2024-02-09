@@ -48,7 +48,7 @@ const EditWhatsappTemplate = () => {
                 <div >
                     <label htmlFor="name" className=" block text-sm my-2 font-medium leading-6 text-gray-900" >Content</label>
                     <div className=''>
-                        <textarea name='Description' class=" bg-gray-50 rounded-md text-sm p-2 w-full h-44 border-2 border-gray-200 focus:outline-none focus:border-orange-400"></textarea>
+                        <textarea name='Description' className=" bg-gray-50 rounded-md text-sm p-2 w-full h-44 border-2 border-gray-200 focus:outline-none focus:border-orange-400"></textarea>
                     </div>
                 </div>
                 <div>
@@ -74,11 +74,11 @@ const EditWhatsappTemplate = () => {
                         </div>
                     </div>
                 </div>
-                <div class="flex items-start my-5">
-                    <div class="flex items-center h-5">
-                        <input id="remember" type="checkbox" value="" class="w-4 h-4 border " required />
+                <div className="flex items-start my-5">
+                    <div className="flex items-center h-5">
+                        <input id="remember" type="checkbox" value="" className="w-4 h-4 border " required />
                     </div>
-                    <label for="remember" class="ms-2 text-sm font-medium text-gray-900 ">Active / Enabled</label>
+                    <label for="remember" className="ms-2 text-sm font-medium text-gray-900 ">Active / Enabled</label>
                 </div>
                 <div className='flex justify-end'>
                     <button type="submit"

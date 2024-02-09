@@ -10,8 +10,8 @@ const Settings = () => {
    <Link  
     to="/organizationprofile">
       <div className='grid1-item  text-start'>
-      <div class=" py-5 px-4 text-center bg-orange-600 rounded-md">
-    <p class="text-white text-base">
+      <div className=" py-5 px-4 text-center bg-orange-600 rounded-md">
+    <p className="text-white text-base">
     Organization Profile
     </p>
   </div>
@@ -21,8 +21,8 @@ const Settings = () => {
 
 <Link to="/forms">
 <div className='grid1-item  text-start'>
-    <div class=" py-5 px-4 text-center bg-orange-600 rounded-md">
-    <p class="text-white text-base">
+    <div className=" py-5 px-4 text-center bg-orange-600 rounded-md">
+    <p className="text-white text-base">
      Forms
     </p>
   </div>
@@ -30,8 +30,8 @@ const Settings = () => {
 </Link>
 <Link to="/communication">
 <div className='grid1-item  text-start'>
-    <div class=" py-5 px-4 text-center bg-orange-600 rounded-md">
-    <p class="text-white text-base">
+    <div className=" py-5 px-4 text-center bg-orange-600 rounded-md">
+    <p className="text-white text-base">
      Communication
     </p>
   </div>
@@ -39,8 +39,8 @@ const Settings = () => {
 </Link>
 <Link to="/roles">
 <div className='grid1-item  text-start'>
-    <div class=" py-5 px-4 text-center bg-orange-600 rounded-md">
-    <p class="text-white text-base">
+    <div className=" py-5 px-4 text-center bg-orange-600 rounded-md">
+    <p className="text-white text-base">
      Roles
     </p>
   </div>
@@ -48,8 +48,8 @@ const Settings = () => {
 </Link>
 <Link to="/integrations">
 <div className='grid1-item  text-start'>
-    <div class=" py-5 px-4 text-center bg-orange-600 rounded-md">
-    <p class="text-white text-base">
+    <div className=" py-5 px-4 text-center bg-orange-600 rounded-md">
+    <p className="text-white text-base">
     Integrations
     </p>
   </div>
